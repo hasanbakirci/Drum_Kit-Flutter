@@ -32,52 +32,6 @@ class _DrumKitViewState extends State<DrumKitView> {
       body: MusicButtonsArea(),
     );
   }
-
-  Widget MusicButton() {
-    return Expanded(
-        child: Container(
-      margin: EdgeInsets.all(10.0),
-      decoration: BoxDecoration(color: Colors.grey[300], boxShadow: [
-        BoxShadow(
-          color: Colors.grey[500],
-          offset: Offset(2.0, 2.0),
-          blurRadius: 8.0,
-          spreadRadius: 1.0,
-        ),
-        BoxShadow(
-          color: Colors.white,
-          offset: Offset(-2.0, -2.0),
-          blurRadius: 8.0,
-          spreadRadius: 1.0,
-        )
-      ]),
-      child: MaterialButton(
-        padding: EdgeInsets.all(30.0),
-        child: Text(
-          "asd",
-          style: TextStyle(
-            fontSize: 22.0,
-          ),
-        ),
-        onPressed: () {},
-      ),
-    ));
-  }
-
-  Widget StackScreen() {
-    return Stack(
-      children: <Widget>[
-        Image.asset(
-          'assets/bg.png',
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          fit: BoxFit.cover,
-        ),
-        MusicButtonsArea(),
-      ],
-    );
-  }
-
   Widget MusicButtonsArea() {
     return Center(
       child: Container(margin: EdgeInsets.all(10),
